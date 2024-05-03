@@ -1,0 +1,92 @@
+{% load cart_template_tags %}
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light black scrolling-navbar">
+      <!-- Brand -->
+      <div class="navbar-brand waves-effect" >
+        <strong class="white-text">Django website for clothes</strong>
+      </div>
+      
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto" >
+           <li class="nav-item">
+            <a class="nav-link waves-effect" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="/allproducts">
+            products</a>
+          </li> 
+
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="/Track-order">
+            Track your Order</a>
+          </li> 
+          
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="/contactus">
+            Contact Us</a>
+          </li> 
+
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="/aboutus">
+            About Us</a>
+          </li>
+        </ul>
+
+        <!-- Search bar -->
+      <form class="d-flex" role="search" method="POST" action="{% url 'myapp:search' %}">
+        {% csrf_token %}
+        <input
+            type="search"
+            placeholder="What are you looking for ?"
+            name="search_query"
+            required aria-label="Search"  style="width: 1020px">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <!-- Search bar -->
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a href="{% url 'myapp:show_wishlist'%}" class="nav-link waves-effect">
+              <span class="clearfix d-none d-sm-inline-block"> wishlist </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'myapp:order-summary'%}" class="nav-link waves-effect">
+              <span class="badge red z-depth-1 mr-1"> {{ request.user|cart_item_count }} </span>
+              <i class="fas fa-shopping-cart"></i>
+              <span class="clearfix d-none d-sm-inline-block"> Cart </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
+              <span class="clearfix d-none d-sm-inline-block"> Logout </span>
+            </a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'account_login' %}">
+              <span class="clearfix d-none d-sm-inline-block"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login </span>
+            </a>
+          </li>
+          &nbsp;&nbsp;
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'account_signup' %}">
+              <span class="clearfix d-none d-sm-inline-block"> Signup &nbsp;&nbsp; </span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+
+  </div>
+</nav>

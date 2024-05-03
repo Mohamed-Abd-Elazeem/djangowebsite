@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+  {% block header %}
+ <!-- Background image -->
+</br>
+ <div id="bgintro" class="bg-image shadow-2-strong">
+ </br></br></br></br></br></br></br></br></br></br></br></br>
+  <div class="mask" style="text-align: right;">
+    <div class="container d-flex align-items-center justify-content-center text-center h-100">
+      <div class="text-black" data-mdb-theme="_black">
+        <h1 class="mb-3">Best Collection</h1>
+        <h3 class="mb-3">For All Categories</h3>
+        <h4 class="mb-4">Men - Women - Children</h4>
+        <a class="btn btn-primary btn-lg m-2" data-mdb-ripple-init href="/allproducts" role="button"
+           rel="nofollow" >Shop Now</a>
+        <a class="btn btn-primary btn-lg m-2" data-mdb-ripple-init href="/aboutus" 
+           role="button">About Us</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Background image -->
+{% endblock %}
+
+
+{% block content %}
+<main class="mt-5">
+  <div class="container">
+    <!--Section: Content-->
+    <section>
+      <div class="row">
+        <div class="col-md-6 gx-5 mb-4">
+          <div class="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init data-mdb-ripple-color="light">
+            <img src="../static/img/blog-img.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 gx-5 mb-4">
+          <h4><strong>Facilis consequatur eligendi</strong></h4>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
+            eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
+            sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+          </p>
+          <p><strong>Doloremque vero ex debitis veritatis?</strong></p>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
+            nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
+            alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+          </p>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
+            nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
+            alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
+            nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
+            alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+            
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Section: Content-->
+
+    <hr class="my-5" />
+
+    <!--Section: Content-->
+    <section class="text-center">
+      <h4 class="mb-5"><strong>Facilis consequatur eligendi</strong></h4>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+              <img src="..\static\img\instagram-img-03.jpg" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the
+                card's content.
+              </p>
+              <a href="/product/10" class="btn btn-primary" data-mdb-ripple-init>Offer 1</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+              <img src="..\static\img\instagram-img-02.jpg" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the
+                card's content.
+              </p>
+              <a href="/product/2" class="btn btn-primary" data-mdb-ripple-init>Offer 2</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+              <img src="..\static\img\images (1).jpg" class="img-fluid" / width="600" height="300">
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the
+                card's content.
+              </p>
+              <a href="/product/7" class="btn btn-primary" data-mdb-ripple-init>Offer 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section: Content-->
+
+    <hr class="my-5" />
+
+  </div>
+</main>
+{% endblock content %}

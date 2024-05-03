@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    {% include "header.html" %}
+    {% include "message_alert.html" %}
+    
+    {% block header %}
+    {% endblock %}
+    
+  </header>
+
+  <body>
+    {% include "navbar.html" %}
+
+    {% block content %}
+    {% endblock content %}
+   
+    {% include "scripts.html" %}
+    {% block scripts %}
+    {% endblock %}
+   
+    {% include "footer.html" %}
+  </body>
+</html>

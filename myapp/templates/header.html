@@ -1,0 +1,63 @@
+{% load static %}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>{% block head_title %}E-commerce Shop{% endblock %}</title>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+
+<style type="text/css">
+  body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(42, 29%, 93%);
+    }
+  footer{
+    margin-top: auto;
+    text-align : center;
+    width:100%;
+    font-family: 'Open Sans', sans-serif;
+background-color: rgb(126, 122, 116) !important;
+  }
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+
+  .container2{    
+    text-align: center;
+    margin-top: 150px;
+  }
+
+  #bgintro {
+  background-image : url("../static/img/Website-Images-FASHION.webp"); 
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  background-size: 100% 100%;
+  margin-top: -58.59px;
+}
+
+  #bg1 {
+    background-image : url("../static/img/ezgif-2-8d7656c884-1024x576.webp"); 
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    background-size: 100% 100%;
+    margin-top: -10.0px;
+  }
+  
+  #bg2 {
+    background-image : url("../static/img/img(3).jpg"); 
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    background-size: 100% 100%;
+    color:blue;
+  }
+  
+</style>

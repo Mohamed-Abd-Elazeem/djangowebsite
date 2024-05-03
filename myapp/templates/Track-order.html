@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="mt-4">
+    <div class="container">
+    <!--Section: Content-->
+        <section>
+            <div class="row">
+                <div class="col-md-7 gx-5 mb-4">
+                    <br>
+                    <h1><b>All Active Orders Appears Here<b><h1>
+                        <h5><b>request refund through reference code<b></h5>
+                        <h5><b>request refund button below<b></h5>
+                        <br>
+                        {% for single_order in order %}
+                        <div class="column">
+                            <h5>ordered_date: {{single_order.ordered_date}}</h5>
+                            <h5>user: {{single_order.user}}</h5>
+                            <h5>ordered items: {{single_order.items.all}}</h5>
+                            <h5>ref_code: {{single_order.ref_code}}</h5>
+                            <h5>being_delivered: {{single_order.being_delivered}}</h5>
+                            <h5>received: {{single_order.received}}</h5>
+                            <h5>payment amount: {{single_order.payment.amount}} eg</h5>
+                            <h5>refund requested status: {{single_order.refund_requested}}</h5>
+                            <h5>refund granted status: {{single_order.refund_granted}}</h5>
+                            </br> 
+                        </div>
+                        {% endfor %}
+                        {% if order %}        
+                        <a href="/request-refund" class="btn btn-primary" data-mdb-ripple-init>Request Refund</a>
+                        {% endif %} 
+                </div>
+            </div>
+        
+        </section>
+        <!--Section: Content-->
+    </div> 
+</main>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}
